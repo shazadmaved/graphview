@@ -78,11 +78,7 @@ class _GraphViewState extends State<GraphView> {
         key: widget.key,
         graph: widget.graph,
         algorithm: widget.algorithm,
-        //paint: widget.paint,
-        paint: Paint()
-          ..color = Colors.green
-          ..strokeWidth = 1
-          ..style = PaintingStyle.stroke,
+        paint: widget.paint,
         builder: widget.builder,
       );
     }
@@ -160,7 +156,7 @@ class RenderCustomLayoutBox extends RenderBox
   set edgePaint(Paint? value) {
     _paint = value ??
         (Paint()
-          ..color = Colors.black
+          ..color = Colors.green
           ..strokeWidth = 3)
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.butt;
